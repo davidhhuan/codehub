@@ -1,0 +1,28 @@
+172.26.0.27	git.ijie.com
+172.26.0.27	db.local.dev.ijie.com
+172.26.0.51     db.local.qa.ijie.com
+
+127.0.0.1	localhost
+127.0.1.1	birdylee-OptiPlex-760
+127.0.0.1    	sh.owe.37.ijie.com
+127.0.0.1	admin.sh.owe.37.ijie.com
+127.0.0.1    	bj.owe.37.ijie.com
+127.0.0.1	admin.bj.owe.37.ijie.com
+127.0.0.1    	test.37.local
+127.0.0.1       sh.local.37.ijie.com
+127.0.0.1       bj.local.37.ijie.com
+127.0.0.1       emagazine.37.ijie.com
+127.0.0.1	app.m.37.ijie.com
+127.0.0.1	admin.app.m.37.ijie.com
+127.0.0.1	yiis.local.37.com
+127.0.0.1	admin.yiis.local.37.com
+127.0.0.1	phpcms.37.ijie.com
+127.0.0.1	ijie.37.ijie.com
+
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
