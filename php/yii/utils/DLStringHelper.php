@@ -31,7 +31,7 @@ class DLStringHelper
      * @param type $onlyAlphanumeric only number and word
      * @param type $length 
      */
-    public function randString($onlyAlphanumeric = true, $length = 10)
+    public static function randString($onlyAlphanumeric = true, $length = 10)
     {
         $rs = '';
         $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
