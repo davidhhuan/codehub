@@ -2,8 +2,8 @@
 set project [lindex $argv 0]
 switch $project {
     event {
-    	set path heng@event.shedunews.com
-	set password heng123456
+    	set path test.com
+	set password test
     }
     default {
         exit
