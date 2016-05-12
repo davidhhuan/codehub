@@ -6,6 +6,7 @@ DBHost=your_db_host
 DBName=your_db_name
 DBUser=your_db_user_name
 DBPasswd=your_db_user_password
+# remember add the slash at the end!!!
 BackupPath=/path/to/bak/
 LogFile=/path/to/bak/db.log
 DBPath=/path/to/db/
@@ -16,9 +17,9 @@ BackupMethod=mysqldump
 
 
 NewFile="$BackupPath$DBName"$(date +%y%m%d).tgz
-DumpFile="$BackupPath$DBName"$(date +%y%m%d)
-NewFileName="$DBName"$(date +%y%m%d)
-OldFile="$BackupPath$DBName"$(date +%y%m%d --date='5 days ago').tgz
+DumpFile="$BackupPath$DBName"$(date +%y%m%d).sql
+NewFileName="$DBName"$(date +%y%m%d).sql
+OldFile="$BackupPath$DBName"$(date +%y%m%d --date='90 days ago').tgz
 
 echo "-------------------------------------------" >> $LogFile
 echo $(date +"%y-%m-%d %H:%M:%S") >> $LogFile
@@ -38,9 +39,9 @@ then
 else
         if [ -z $DBPasswd ]
         then
-                mysqldump -h $DBHost -u $DBUser --default-character-set=gbk --opt $DBName > $DumpFile
+                mysqldump -h $DBHost -u $DBUser --default-character-set=utf8 --opt $DBName > $DumpFile
         else
-                mysqldump -h $DBHost -u $DBUser --default-character-set=gbk -p$DBPasswd --opt $DBName > $DumpFile
+                mysqldump -h $DBHost -u $DBUser --default-character-set=utf8 -p$DBPasswd --opt $DBName > $DumpFile
         fi
         cd $BackupPath
         tar czvf $NewFile $NewFileName >> $LogFile 2>&1
